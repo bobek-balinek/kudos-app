@@ -1,4 +1,4 @@
-upstream kudos-desert-fm {
+upstream desertfm-kudos-app {
   server 127.0.0.1:4007;
 }
 
@@ -13,6 +13,6 @@ server {
     proxy_set_header X-Forwarded-For $proxy_add_x_forwarded_for;
     proxy_set_header Host $http_host;
     proxy_redirect off;
-    proxy_pass http://kudos-desert-fm;
+    proxy_pass http://desertfm-kudos-app;
   }
 }

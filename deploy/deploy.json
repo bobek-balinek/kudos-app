@@ -1,1 +1,1 @@
-{"appurl":"kudos.desert.fm","name":"kudos-desert-fm","entry":"npm start","port":"4007","path":"/var/www","nginx":"/etc/nginx/sites-enabled","url":"git@github.com:bobek-balinek/kudos-app.git","server":"root@mothership"}
+{"appurl":"kudos.desert.fm","name":"desertfm-kudos-app","entry":"npm start","port":"4007","path":"/var/www","nginx":"/etc/nginx/sites-enabled","url":"git@github.com:bobek-balinek/kudos-app.git","server":"root@mothership"}
