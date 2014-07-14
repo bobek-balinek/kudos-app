@@ -13,6 +13,7 @@
     "body-parser": "~1.0.0",
     "debug": "~0.7.4",
     "jade": "~1.3.0",
-    "graceful-fs": "~3.0.2"
+    "graceful-fs": "~3.0.2",
+    "cors": "~2.4.1"
   }
 }

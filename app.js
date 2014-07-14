@@ -1,34 +1,19 @@
 var express = require('express');
 var router = express.Router();
 var path = require('path');
+var cors = require('cors');
 var logger = require('morgan');
 var bodyParser = require('body-parser');
 var kudosService = require('./lib/kudos');
 var app = express();
 
+app.use(cors());
 app.use('/', router);
 
 app.use(logger('dev'));
 app.use(bodyParser.json());
 app.use(bodyParser.urlencoded());
 app.use(express.static(path.join(__dirname, 'public')));
-
-app.use(function(req, res, next) {
-  if (req.method === 'OPTIONS') {
-    var headers = {};
-    headers["Access-Control-Allow-Origin"] = "*";
-    headers["Access-Control-Allow-Methods"] = "POST, GET, PUT, DELETE, OPTIONS";
-    headers["Access-Control-Max-Age"] = '86400'; // 24 hours
-    headers["Access-Control-Allow-Headers"] = "X-Requested-With, X-HTTP-Method-Override, Content-Type, Accept";
-    res.writeHead(200, headers);
-    res.end();
-  } else {
-    var headers = {};
-    headers["Access-Control-Allow-Origin"] = "*";
-    res.set(headers);
-    return next();
-  }
-});
 
 /// catch 404 and forwarding to error handler
 app.use(function(req, res, next) {
