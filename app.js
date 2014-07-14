@@ -61,7 +61,7 @@ router.post('/', function(req, res) {
     kudosService.updateCount(req.query.path, function(err, counter){
         res.json({
             path: req.query.path,
-            count: counter
+            count: counter[req.query.path]
         });
     });
 });
